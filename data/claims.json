@@ -92,7 +92,8 @@
             "Claim Form",
             "Vehicle Registration",
             "Driving License",
-            "Repair Estimate"
+            "Repair Estimate",
+            "Hospital Bill"
         ],
         "estimated_processing_days": "3-4 business days after assessment"
     },
