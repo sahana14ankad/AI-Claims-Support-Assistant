@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>AI Claims Support Assistant</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+
+</head>
+
+<body>
+
+
+<header class="header">
+    <div class="container">
+        <h1>AI Claims Support Assistant</h1>
+        <p>Intelligent insurance claim tracking and customer support</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="search-section">
+
+        <h2>Check Your Claim</h2>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="claimId"
+                placeholder="Enter Claim ID (e.g. CLM10001)"
+            >
+
+            <button onclick="loadClaim()">
+                Check Claim
+            </button>
+
+        </div>
+
+        <div id="claimError"></div>
+
+    </section>
+
+
+    <!-- CLAIM DASHBOARD -->
+
+    <section
+        id="dashboard"
+        class="dashboard-section hidden"
+    >
+
+        <h2>Claim Overview</h2>
+
+
+        <!-- CLAIM INFORMATION -->
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>CUSTOMER NAME</h3>
+                <p id="customerName">-</p>
+            </div>
+
+            <div class="card">
+                <h3>CLAIM STATUS</h3>
+                <p id="claimStatus">-</p>
+            </div>
+
+            <div class="card">
+                <h3>CLAIM AMOUNT</h3>
+                <p id="claimAmount">-</p>
+            </div>
+
+            <div class="card">
+                <h3>CLAIM TYPE</h3>
+                <p id="claimType">-</p>
+            </div>
+
+            <div class="card">
+                <h3>CURRENT STAGE</h3>
+                <p id="claimStage">-</p>
+            </div>
+
+            <div class="card">
+                <h3>DOCUMENT COMPLETENESS</h3>
+                <p id="documentCompleteness">-</p>
+            </div>
+
+            <div class="card">
+                <h3>ESTIMATED PROCESSING</h3>
+                <p id="processingTime">-</p>
+            </div>
+
+        </div>
+
+
+        <!-- CLAIM PROGRESS -->
+
+        <section class="progress-section">
+
+            <h2>Claim Progress</h2>
+
+            <div class="claim-progress">
+
+                <div class="progress-step" id="stepSubmitted">
+
+                    <div class="progress-circle">
+                        1
+                    </div>
+
+                    <p>
+                        Claim Submitted
+                    </p>
+
+                </div>
+
+
+                <div class="progress-line"></div>
+
+
+                <div class="progress-step" id="stepDocuments">
+
+                    <div class="progress-circle">
+                        2
+                    </div>
+
+                    <p>
+                        Document Verification
+                    </p>
+
+                </div>
+
+
+                <div class="progress-line"></div>
+
+
+                <div class="progress-step" id="stepAssessment">
+
+                    <div class="progress-circle">
+                        3
+                    </div>
+
+                    <p>
+                        Assessment
+                    </p>
+
+                </div>
+
+
+                <div class="progress-line"></div>
+
+
+                <div class="progress-step" id="stepSettlement">
+
+                    <div class="progress-circle">
+                        4
+                    </div>
+
+                    <p>
+                        Settlement
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DOCUMENT VERIFICATION -->
+
+        <section class="documents-section">
+
+            <h2>Document Verification</h2>
+
+            <div id="documentsList"></div>
+
+        </section>
+
+
+        <!-- AI CLAIM SUMMARY -->
+
+        <section class="summary-section">
+
+            <h2>AI Claim Summary</h2>
+
+            <div id="aiSummary">
+                Click "Generate AI Summary" to get
+                an intelligent summary of this claim.
+            </div>
+
+            <button onclick="generateAISummary()">
+                Generate AI Summary
+            </button>
+
+        </section>
+
+
+        <!-- DOCUMENT UPLOAD -->
+
+        <section class="upload-section">
+
+            <h2>Upload Missing Document</h2>
+
+            <div class="form-group">
+
+                <label for="documentType">
+                    Document Type
+                </label>
+
+                <select id="documentType">
+
+                    <option value="">
+                        Select document type
+                    </option>
+
+                    <option value="Claim Form">
+                        Claim Form
+                    </option>
+
+                    <option value="Hospital Bill">
+                        Hospital Bill
+                    </option>
+
+                    <option value="Discharge Summary">
+                        Discharge Summary
+                    </option>
+
+                    <option value="Prescription">
+                        Prescription
+                    </option>
+
+                    <option value="Diagnostic Reports">
+                        Diagnostic Reports
+                    </option>
+
+                    <option value="ID Proof">
+                        ID Proof
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <input
+                    type="file"
+                    id="documentFile"
+                    accept=".pdf,.jpg,.jpeg,.png"
+                >
+
+            </div>
+
+
+            <button onclick="uploadDocument()">
+                Upload Document
+            </button>
+
+            <div id="uploadResult"></div>
+
+        </section>
+
+
+        <!-- AI CHAT -->
+
+        <section class="chat-section">
+
+            <h2>AI Claims Assistant</h2>
+
+            <div
+                id="chatMessages"
+                class="chat-messages"
+            >
+
+                <div class="bot-message">
+                    Hello! Enter your Claim ID above
+                    and ask me anything about your claim.
+                </div>
+
+            </div>
+
+
+            <div class="chat-input">
+
+                <input
+                    type="text"
+                    id="question"
+                    placeholder="Ask something about your claim..."
+                    onkeypress="handleEnter(event)"
+                >
+
+                <button onclick="askAssistant()">
+                    Ask AI
+                </button>
+
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <p>
+        AI Claims Support Assistant |
+        Generative AI Insurance Solution
+    </p>
+
+</footer>
+
+
+<script src="/static/script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+[
+    {
+        "claim_id": "CLM10001",
+        "customer_name": "Rahul Sharma",
+        "claim_type": "Health",
+        "claim_amount": 85000,
+        "submitted_date": "2026-09-01",
+        "status": "Under Review",
+        "stage": "Document Verification",
+        "required_documents": [
+            "Claim Form",
+            "Hospital Bill",
+            "Discharge Summary",
+            "Prescription",
+            "Diagnostic Reports",
+            "ID Proof"
+        ],
+        "submitted_documents": [
+            "Claim Form",
+            "Hospital Bill",
+            "Discharge Summary",
+            "ID Proof",
+            "Prescription",
+            "Diagnostic Reports"
+        ],
+        "estimated_processing_days": "2-3 business days after documents are complete"
+    },
+    {
+        "claim_id": "CLM10002",
+        "customer_name": "Priya Patel",
+        "claim_type": "Motor",
+        "claim_amount": 120000,
+        "submitted_date": "2026-08-28",
+        "status": "Approved",
+        "stage": "Settlement",
+        "required_documents": [
+            "Claim Form",
+            "Vehicle Registration",
+            "Driving License",
+            "Repair Estimate",
+            "Police Report"
+        ],
+        "submitted_documents": [
+            "Claim Form",
+            "Vehicle Registration",
+            "Driving License",
+            "Repair Estimate",
+            "Police Report"
+        ],
+        "estimated_processing_days": "1-2 business days"
+    },
+    {
+        "claim_id": "CLM10003",
+        "customer_name": "Amit Kumar",
+        "claim_type": "Health",
+        "claim_amount": 65000,
+        "submitted_date": "2026-09-03",
+        "status": "Documents Pending",
+        "stage": "Document Collection",
+        "required_documents": [
+            "Claim Form",
+            "Hospital Bill",
+            "Discharge Summary",
+            "Prescription",
+            "ID Proof"
+        ],
+        "submitted_documents": [
+            "Claim Form",
+            "Hospital Bill",
+            "ID Proof",
+            "Discharge Summary",
+            "Prescription"
+        ],
+        "estimated_processing_days": "3-5 business days after documents are complete"
+    },
+    {
+        "claim_id": "CLM10004",
+        "customer_name": "Sneha Rao",
+        "claim_type": "Motor",
+        "claim_amount": 95000,
+        "submitted_date": "2026-09-02",
+        "status": "Under Review",
+        "stage": "Assessment",
+        "required_documents": [
+            "Claim Form",
+            "Vehicle Registration",
+            "Driving License",
+            "Repair Estimate",
+            "Police Report"
+        ],
+        "submitted_documents": [
+            "Claim Form",
+            "Vehicle Registration",
+            "Driving License",
+            "Repair Estimate"
+        ],
+        "estimated_processing_days": "3-4 business days after assessment"
+    },
+    {
+        "claim_id": "CLM10005",
+        "customer_name": "Vikram Singh",
+        "claim_type": "Health",
+        "claim_amount": 150000,
+        "submitted_date": "2026-08-25",
+        "status": "Approved",
+        "stage": "Settlement",
+        "required_documents": [
+            "Claim Form",
+            "Hospital Bill",
+            "Discharge Summary",
+            "Prescription",
+            "Diagnostic Reports",
+            "ID Proof"
+        ],
+        "submitted_documents": [
+            "Claim Form",
+            "Hospital Bill",
+            "Discharge Summary",
+            "Prescription",
+            "Diagnostic Reports",
+            "ID Proof"
+        ],
+        "estimated_processing_days": "1-2 business days"
+    }
+]
