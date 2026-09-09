@@ -600,4 +600,4 @@ The system provides clear, user-friendly responses based on the claim informatio
 
 The system uses AI to validate uploaded claim documents by checking the document type, claim ID, relevance to the claim, and potential mismatches.
 
-![AI Document Validation](images/Screenshot 2026-09-09 134138.png)
+![AI Document Validation](images/Screenshot%202026-09-09%20134138.png)
