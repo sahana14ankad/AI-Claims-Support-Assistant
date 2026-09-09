@@ -1,5 +1,4 @@
 # AI-Claims-Support-Assistant
-# AI Claims Support Assistant
 
 An AI-powered insurance claims support solution that helps customers track claims, understand document requirements, receive AI-generated claim summaries, interact with a conversational claims assistant, and validate uploaded documents.
 
@@ -546,3 +545,53 @@ The **AI Claims Support Assistant** combines traditional backend processing with
 Traditional logic handles deterministic operations such as claim retrieval and document completeness, while Generative AI handles natural-language interaction, claim summarization, and document interpretation.
 
 The solution provides customers with greater transparency and self-service while reducing repetitive manual effort for support teams.
+
+## Screenshots
+
+### 1. Claims Support Dashboard
+
+The main dashboard provides users with an overview of the claims support system and allows them to interact with their insurance claims.
+
+![Claims Support Dashboard](images/Screenshot%202026-09-09%20131949.png)
+
+### 2. Claim Status
+
+Users can enter a claim ID to view the current status and details of their insurance claim.
+
+![Claim Status](images/Screenshot%202026-09-09%20132009.png)
+
+### 3. Claim Progress Tracking
+
+The system provides a visual representation of the claim processing journey across different stages.
+
+![Claim Progress](images/Screenshot%202026-09-09%20132022.png)
+
+### 4. Document Verification
+
+The document verification feature checks the submitted documents and identifies whether any required documents are missing.
+
+![Document Verification](images/Screenshot%202026-09-09%20132038.png)
+
+### 5. AI Claim Summary
+
+The AI-powered claim summarization feature generates a concise summary of the claim information to help users understand their claim quickly.
+
+![AI Claim Summary](images/Screenshot%202026-09-09%20132056.png)
+
+### 6. AI Claims Assistant
+
+The conversational AI assistant allows users to ask questions about their claim, including status, required documents, processing time, and claim summaries.
+
+![AI Claims Assistant](images/Screenshot%202026-09-09%20132022.png)
+
+### 7. Document Upload and AI Validation
+
+Users can upload claim-related documents, which are processed and validated using the AI-powered document validation service.
+
+![AI Document Validation](images/Screenshot%202026-09-09%20132208.png)
+
+### 8. Claim Information and Response
+
+The system provides clear, user-friendly responses based on the claim information and available documents.
+
+![Claim Information](images/Screenshot%202026-09-09%20132243.png)
