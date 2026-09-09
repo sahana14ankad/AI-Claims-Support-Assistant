@@ -595,3 +595,12 @@ Users can upload claim-related documents, which are processed and validated usin
 The system provides clear, user-friendly responses based on the claim information and available documents.
 
 ![Claim Information](images/Screenshot%202026-09-09%20132243.png)
+
+### 9. AI Document Validation
+
+The system uses AI to validate uploaded claim documents by checking the document type, claim ID, relevance to the claim, and potential mismatches.
+
+![AI Document Validation](images/document-validation.png)
+
+
+![AI Document Validation](images/Screenshot%202026-09-09%20142500.png)
